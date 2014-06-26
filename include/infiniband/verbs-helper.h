@@ -71,6 +71,14 @@ enum ibv_helper_phys_port_state {
 	IBV_HELPER_PHYS_PORT_PHY_TEST			  = 7,
 };
 
+enum ibv_helper_max_vl {
+	IBV_HELPER_MAX_VL_1  = 1,
+	IBV_HELPER_MAX_VL_2  = 2,
+	IBV_HELPER_MAX_VL_4  = 3,
+	IBV_HELPER_MAX_VL_8  = 4,
+	IBV_HELPER_MAX_VL_15 = 5,
+};
+
 END_C_DECLS
 
 #  undef __attribute_const
