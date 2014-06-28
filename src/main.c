@@ -30,3 +30,9 @@ int ibv_helper_modify_block_mode_comp_channel(struct ibv_comp_channel *channel,
 {
 	return modify_block_mode(channel->fd, use_block);
 }
+
+int ibv_helper_modify_block_mode_device(struct ibv_context *context,
+					int use_block)
+{
+	return modify_block_mode(context->async_fd, use_block);
+}

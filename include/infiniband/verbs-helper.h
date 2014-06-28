@@ -96,6 +96,21 @@ END_C_DECLS
 int ibv_helper_modify_block_mode_comp_channel(struct ibv_comp_channel *channel,
 					      int use_block);
 
+/**
+ * ibv_helper_modify_block_mode_device - Modifies the blocking mode of a device
+ *                                       when reading async events.
+ *
+ * @context:    devic context to modify.
+ * @use_block:  if non-zero, modify the device to work in blocking mode.
+ *              If zero, modify the device to work in non-blocking mode.
+ *
+ * This function returns 0 on success and returns -1 on failure
+ * (errno indicates the failure reason).
+ */
+int ibv_helper_modify_block_mode_device(struct ibv_context *context,
+					int use_block);
+
+
 
 #  undef __attribute_const
 
